@@ -3,8 +3,8 @@ export default function createMushrooms(root) {
     const container = root.querySelector('.mushroom-container');
 
     return ({ mushrooms }) => {
-        // *** clear out the container element
-        container.InnerHtml = '';
+        // *** clear out the container element needs to be all caps
+        container.innerHTML = '';
         // loop the mushrooms!
         for (let mushroom of mushrooms) {
         // add one Mushroom component for each mushroom object
