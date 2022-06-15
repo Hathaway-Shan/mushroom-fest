@@ -47,7 +47,11 @@ const Forest = createForest(document.querySelector('#forest'), {
 const Friends = createFriends(document.querySelector('#friends'), {
     handleFeedFriend: (friend) => {
         // *** Three possible outcomes:
-        // 1. Set a message if no mushrooms exist telling user to go hunt some
+        // 1. Set a message if no mushrooms exist telling user to go hunt some;
+        if (state.mushrooms.length === 0) {
+            setMessage('go hunt some mushrooms');
+            display();
+        }
         // 2. Friend is already fully satisfied ( === 2), set a message
         //    that this friend is full and they should pick another friend
         // 3. run logic to feed the friend:
